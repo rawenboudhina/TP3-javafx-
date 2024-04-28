@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="lastNameCol" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookControlor">
+   <children>
+      <Label layoutX="102.0" layoutY="76.0" prefHeight="21.0" prefWidth="128.0" text="Prénom :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="138.0" prefHeight="21.0" prefWidth="99.0" text="Nom :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="197.0" prefHeight="21.0" prefWidth="114.0" text="Adresse Mail :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prenomId" layoutX="272.0" layoutY="71.0" />
+      <TextField fx:id="nomId" layoutX="272.0" layoutY="123.0" />
+      <TextField fx:id="mailId" layoutX="272.0" layoutY="182.0" />
+      <Button fx:id="Addbtn" layoutX="312.0" layoutY="316.0" mnemonicParsing="false" onAction="#Add" prefHeight="31.0" prefWidth="175.0" text="Ajouter à la table" />
+      <TableView fx:id="tableViewId" layoutX="285.0" layoutY="375.0" prefHeight="200.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="Prénom" />
+            <TableColumn fx:id="lastNameCol" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="Mail" />
+        </columns>
+      </TableView>
+      <HBox layoutX="123.0" layoutY="625.0" prefHeight="100.0" prefWidth="354.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="366.0" spacing="10.0">
+               <children>
+                  <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#remove" text="supprimer" />
+                  <Button fx:id="importBtn" mnemonicParsing="false" onAction="#importer" text="importer" />
+                  <Button fx:id="exportBtn" mnemonicParsing="false" onAction="#exporter" text="exporter" />
+                  <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>
