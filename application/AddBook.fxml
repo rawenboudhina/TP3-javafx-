@@ -30,7 +30,7 @@
       <TextField fx:id="nomId" layoutX="272.0" layoutY="123.0" />
       <TextField fx:id="mailId" layoutX="272.0" layoutY="182.0" />
       <Button fx:id="Addbtn" layoutX="312.0" layoutY="316.0" mnemonicParsing="false" onAction="#Add" prefHeight="31.0" prefWidth="175.0" text="Ajouter à la table" />
-      <TableView fx:id="tableViewId" layoutX="285.0" layoutY="375.0" prefHeight="200.0" prefWidth="228.0">
+      <TableView fx:id="tableViewId" layoutX="179.0" layoutY="375.0" prefHeight="200.0" prefWidth="228.0">
         <columns>
           <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="Prénom" />
             <TableColumn fx:id="lastNameCol" prefWidth="75.0" text="Nom" />

@@ -9,6 +9,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -67,9 +69,23 @@ public class AddBookControlor implements Initializable{
 	    	String nom = nomId.getText();
 	    	String prenom = prenomId.getText();
 	    	String mail = mailId.getText();
-	    	tableViewId.getItems().add(new Person(prenom,nom , mail));	
-	    
-	    }
+
+	    	 if (!isEmailAdress(mail)) {
+	    	    showFormErrorAlert(mail + " : Email incorrect !");
+	    	        return; 
+	    	    }
+
+	    	    tableViewId.getItems().add(new Person(prenom, nom, mail));
+	    	}
+
+	    	private void showFormErrorAlert(String message) {
+	    	    Alert alert = new Alert(AlertType.ERROR);
+	    	    alert.setTitle("Form Error!");
+	    	    alert.setHeaderText(null);
+	    	    alert.setContentText(message);
+	    	    alert.show();
+	    	}
+
 	    @FXML
 	    public void remove() {
 	    	Person selectedItem = tableViewId.getSelectionModel().getSelectedItem();
